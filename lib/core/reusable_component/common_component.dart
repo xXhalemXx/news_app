@@ -13,7 +13,6 @@ Scaffold commonMainPage(
     required Widget body,
     int? index,
     List<Articles>? articles}) {
-  print(articles);
   return Scaffold(
     appBar: mainPageAppBar(index, context, articles??[]),
     body: body,

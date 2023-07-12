@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/injection/injection.dart';
 import 'package:news_app/core/reusable_component/common_component.dart';
 import 'package:news_app/news/data/remote/models/news_model.dart';
+import 'package:news_app/news/presentation/manager/mode_management/mode_cubit.dart';
 
 class NewsSearchDelegate extends SearchDelegate {
   List<Articles> articles;
 
   NewsSearchDelegate({required this.articles});
+
+  /*
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    return getIt<ModeCubit>().isBright?
+    ThemeData(
+      colorScheme:const ColorScheme.light(background: Colors.white) ,
+      inputDecorationTheme:  InputDecorationTheme(
+        hintStyle: Theme.of(context).textTheme.bodySmall,
+      ),
+    ):
+    ThemeData(
+      colorScheme:ColorScheme.dark(background: Colors.black) ,
+      inputDecorationTheme:  InputDecorationTheme(
+        hintStyle: Theme.of(context).textTheme.bodySmall,
+      ),
+    );
+  }*/
+
 
   @override
   List<Widget>? buildActions(BuildContext context) {
