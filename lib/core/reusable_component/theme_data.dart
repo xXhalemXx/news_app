@@ -42,16 +42,18 @@ ThemeData lightThemData() {
 
 ThemeData darkThemData() {
   return ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    colorScheme: const ColorScheme.dark(),
     useMaterial3: true,
     scaffoldBackgroundColor: Colors.black45,
     appBarTheme: const AppBarTheme(
-        color: Colors.black45,
-        titleTextStyle: TextStyle(
-          color: Colors.white,
-          fontSize: 22.0,
-        ),
-        actionsIconTheme: IconThemeData(color: Colors.white)),
+      foregroundColor: Colors.black45,
+      backgroundColor: Colors.black45,
+      titleTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 22.0,
+      ),
+      actionsIconTheme: IconThemeData(color: Colors.white),
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colors.black45,
       unselectedItemColor: Colors.grey,
@@ -74,24 +76,6 @@ ThemeData darkThemData() {
         fontWeight: FontWeight.w500,
         color: Colors.white,
       ),
-    ),
-  );
-}
-
-ThemeData appBarTheme(BuildContext context) {
-  final ThemeData theme = Theme.of(context);
-  final ColorScheme colorScheme = theme.colorScheme;
-  return theme.copyWith(
-    appBarTheme: AppBarTheme(
-      systemOverlayStyle: colorScheme.brightness == Brightness.dark
-          ? SystemUiOverlayStyle.light
-          : SystemUiOverlayStyle.dark,
-      backgroundColor: colorScheme.brightness == Brightness.dark
-          ? Colors.grey[900]
-          : Colors.white,
-      iconTheme: theme.primaryIconTheme.copyWith(color: Colors.grey),
-      titleTextStyle: theme.textTheme.titleLarge,
-      toolbarTextStyle: theme.textTheme.bodyMedium,
     ),
   );
 }
