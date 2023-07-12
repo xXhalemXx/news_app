@@ -9,23 +9,21 @@ class NewsSearchDelegate extends SearchDelegate {
 
   NewsSearchDelegate({required this.articles});
 
-  /*
+
   @override
   ThemeData appBarTheme(BuildContext context) {
     return getIt<ModeCubit>().isBright?
     ThemeData(
-      colorScheme:const ColorScheme.light(background: Colors.white) ,
-      inputDecorationTheme:  InputDecorationTheme(
-        hintStyle: Theme.of(context).textTheme.bodySmall,
-      ),
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          useMaterial3: true,
     ):
     ThemeData(
-      colorScheme:ColorScheme.dark(background: Colors.black) ,
+      colorScheme:const ColorScheme.dark(background: Colors.black45) ,
       inputDecorationTheme:  InputDecorationTheme(
         hintStyle: Theme.of(context).textTheme.bodySmall,
       ),
     );
-  }*/
+  }
 
 
   @override

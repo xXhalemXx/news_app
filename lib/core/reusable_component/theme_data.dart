@@ -46,6 +46,7 @@ ThemeData darkThemData() {
     useMaterial3: true,
     scaffoldBackgroundColor: Colors.black45,
     appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(color: Colors.white),
       foregroundColor: Colors.black45,
       backgroundColor: Colors.black45,
       titleTextStyle: TextStyle(

@@ -7,6 +7,7 @@ import 'package:news_app/news/presentation/manager/mode_management/mode_cubit.da
 import 'package:news_app/news/presentation/manager/mode_management/mode_states.dart';
 import 'package:news_app/news/presentation/manager/news_state_management/news_cubit.dart';
 import 'package:news_app/news/presentation/manager/news_state_management/news_states.dart';
+import 'package:news_app/news/presentation/widgets/view_full_news.dart';
 
 Scaffold commonMainPage(
     {required BuildContext context,
@@ -14,7 +15,7 @@ Scaffold commonMainPage(
     int? index,
     List<Articles>? articles}) {
   return Scaffold(
-    appBar: mainPageAppBar(index, context, articles??[]),
+    appBar: mainPageAppBar(index, context, articles ?? []),
     body: body,
     bottomNavigationBar: BottomNavigationBar(
       items: getIt<NewsCubit>().iconsList,
@@ -32,11 +33,13 @@ AppBar mainPageAppBar(int? index, context, List<Articles> articles) {
     actions: [
       BlocBuilder<NewsCubit, NewsStates>(builder: (context, state) {
         if (state == NewsStates.firsPageData(articles) ||
-            state == NewsStates.toggleThrowNews(articles, index??0)) {
+            state == NewsStates.toggleThrowNews(articles, index ?? 0)) {
           return IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
-              showSearch(context: context, delegate: NewsSearchDelegate(articles: articles));
+              showSearch(
+                  context: context,
+                  delegate: NewsSearchDelegate(articles: articles));
             },
           );
         } else {
@@ -57,7 +60,11 @@ AppBar mainPageAppBar(int? index, context, List<Articles> articles) {
 }
 
 Widget commonItem(Articles article, context) => InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) =>
+                ViewFullNews(uri: article.url ?? 'https://flutter.dev')));
+      },
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: SizedBox(
@@ -123,5 +130,3 @@ Widget newsDescription(Articles article, BuildContext context) {
     ],
   );
 }
-
-
