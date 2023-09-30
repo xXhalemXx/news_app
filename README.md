@@ -11,7 +11,7 @@ This Flutter app is a simple news reader I have designed to learn how to handle 
 - [Theming](#theming)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
-- [License](#license)
+- [Contact](#contact)
 
 ## Features
 
@@ -108,4 +108,9 @@ The app supports both dark and light themes. The theming logic can be found in t
 ## Contributing
 
 Contributions to this project are welcome. If you'd like to contribute, please fork the repository, create a new branch, make your changes, and submit a pull request. Please ensure your code follows best practices and includes relevant tests.
+
+## Contact
+
+If you have any questions or feedback, please feel free to contact me at mohamedhalem909@gmail.com.
+
 
