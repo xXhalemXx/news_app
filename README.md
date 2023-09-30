@@ -58,7 +58,7 @@ To get started with this project, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/flutter-news-app.git
+   git clone https://github.com/xXhalemXx/news_app.git
 
 2.  Navigate to the project directory:
     
@@ -76,7 +76,7 @@ To get started with this project, follow these steps:
 
 ## API Integration
 
-The app integrates with a news API to fetch articles. The API integration logic can be found in the `lib/data` directory. We use `dio` for making HTTP requests and `retrofit` for type-safe API calls. You'll find API service classes and models for data handling in this directory.
+The app integrates with a news API to fetch articles. The API integration logic can be found in the `lib/news/data/remote/data_sources` directory. We use `dio` for making HTTP requests and `retrofit` for type-safe API calls. You'll find API service classes and models for data handling in this directory.
 
 To integrate your preferred news API, update the API endpoints, request headers, and data models as needed.
 
@@ -85,8 +85,25 @@ To integrate your preferred news API, update the API endpoints, request headers,
 The app supports both dark and light themes. The theming logic can be found in the `lib/theme` directory. The app's theme can be customized by modifying the theme files in this directory.
 
 ## Screenshots
+### Light Theme
+<p align="center">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/imag1.jpg"  width="300" height="600">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image2.jpg"  width="300" height="600"> 
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image3.jpg"  width="300" height="600"> <br />
+   
+### Dark Theme
+<p align="center">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image5.jpg"  width="300" height="600">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image6.jpg"  width="300" height="600">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image7.jpg"  width="300" height="600"> <br />
+   
+### Search
+<p align="center">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image4.jpg"  width="300" height="600"> <br />
 
-
+### Full Article View
+<p align="center">
+<img src="https://github.com/xXhalemXx/news_app/blob/master/ProjectScreenshots/image8.jpg"  width="300" height="600"> <br />
 
 ## Contributing
 
