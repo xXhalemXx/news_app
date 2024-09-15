@@ -1,6 +1,6 @@
 # News App
 
-This Flutter app is a simple news reader I have designed to learn how to handle APIs in a professional way and fully understand app theming. The app provides news articles from three different categories and supports both dark and light modes.
+ simple news reader I have created to handle APIs in a professional way and fully understand app theming. The app provides news articles from three different categories and supports both dark and light modes.
 
 ## Table of Contents
 
